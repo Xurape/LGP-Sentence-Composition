@@ -4,7 +4,7 @@ import helpers.gestures.verbs as verbs
 class LGPRecognition:
     def __init__(self):
         self.gesture_dict = {
-            "Olá": verbs.hello,
+            "Ola": verbs.hello,
         }
 
     def recognize(self, hand_landmarks):

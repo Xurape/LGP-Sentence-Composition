@@ -36,7 +36,7 @@ while cap.isOpened():
             
             gesture = recognizer.recognize(hand_landmarks)
             if gesture:
-                cv2.putText(frame, f'Gesture: {gesture}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+                cv2.putText(frame, f'Gesture: {gesture}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
     cv2.imshow('LGP - Sentence Composition', frame)
 
