@@ -84,4 +84,4 @@ def A(hand_landmarks):
     if distance > 0.08:
         return False
 
-    return True 
+    return True

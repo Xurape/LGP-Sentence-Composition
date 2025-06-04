@@ -2,6 +2,8 @@ import time
 import helpers.gestures.saudations as saudations
 import helpers.gestures.verbs as verbs
 import helpers.gestures.letters as letters
+import helpers.gestures.numbers as numbers
+import helpers.gestures.names as names
 
 class LGPRecognition:
     def __init__(self):
@@ -12,11 +14,20 @@ class LGPRecognition:
             
             # verbs
             "sou": verbs.be,
+            "eu": verbs.be_horizontal,
+            "quero": verbs.be_open_horizontal,
+            "jogar": verbs.be_fingers_down,
             
             # letters
             "o": letters.O,
             "j": letters.J,
             "a": letters.A,
+            
+            # numbers
+            "um": numbers.one,
+            
+            # names
+            "jogo": names.both_hands_fingers_down
         }
     
     def add_gesture_to_sentence(self, gesture_name, sentence):
