@@ -63,6 +63,7 @@ def goodbye(hand_landmarks):
         tip1 = hand_landmarks.landmark[fingertip_indices[i]]
         tip2 = hand_landmarks.landmark[fingertip_indices[i + 1]]
         
+        #? formula -> √((x1 - x2)^2 + (y1 - y2)^2)
         distance = ((tip1.x - tip2.x) ** 2 + (tip1.y - tip2.y) ** 2) ** 0.5
         
         if i == 0:
