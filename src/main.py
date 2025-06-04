@@ -56,6 +56,8 @@ while cap.isOpened():
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     results = hands.process(frame_rgb)
 
+    cv2.putText(frame, 'R - Apagar frases', (10, 175), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
             mp_drawing.draw_landmarks(
@@ -100,6 +102,13 @@ while cap.isOpened():
     if cv2.waitKey(1) & 0xFF == ord('c'):
         gesture_creator.open_gesture_creator_ui()
         recognizer.update_gestures()
+        
+    elif cv2.waitKey(1) & 0xFF == ord('r'):
+        sentence = ""
+        last_gesture = None
+        last_gesture_time = 0
+        line_break_added = False
+        gesture_start_time = 0
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

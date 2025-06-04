@@ -51,7 +51,7 @@ class LGPRecognition:
     
     def add_gesture_to_sentence(self, gesture_name, sentence):
         if not sentence:
-            # possivel adicionar mais gestos para meter ","
+            #? possivel adicionar mais gestos para meter ","
             if gesture_name in ["ola"]:
                 sentence += f"{gesture_name.capitalize()}, "
             else:
